@@ -23,12 +23,12 @@ var Promise = require('findhit-promise');
 
 		process.nextTick(function () {
 			cb( null, a2, b2)
-		});
+		})
 	};
 
 	async( a1, b1, function ( err, a2, b2 ) {
 		// ...
-	});
+	})
 
 	// Will be
 
@@ -38,7 +38,7 @@ var Promise = require('findhit-promise');
 			abc: function () {},
 			def: function () {},
 			fgh: function () {},
-		};
+		}
 
 		return new Promise(function ( done ) {
 
@@ -56,34 +56,34 @@ var Promise = require('findhit-promise');
 		})
 			// You can configure contexts for chained actions by:
 
-			// specifying function
-			// .extend( name, fn, context )
-			
-			.extend( 'yey', function ( a, b ) {
-				return a + b;
-			}, self)
+				// specifying function
+				// .extend( name, fn, context )
 
-			// giving an object with some functions
-			// .extend( { name: fn, ... }, context )
+				.extend( 'yey', function ( a, b ) {
+					return a + b;
+				}, self)
 
-			.extend({
-				someaction: function ( z ) {
-					return new Promise(function () {
-						return new Error();
-					});
-				},
-				anotheraction: function ( a ) {
-					return new Promise(function () {
-						return !! a;
-					});
-				},
-			}, self)
+				// giving an object with some functions
+				// .extend( { name: fn, ... }, context )
 
-			// Or give an existent instance and the list of keys you want to use
-			// This will run thoose functions with the first object as context
-			// .extend( context, [ 'methodName', ... ] )
+				.extend({
+					someaction: function ( z ) {
+						return new Promise(function () {
+							return new Error();
+						});
+					},
+					anotheraction: function ( a ) {
+						return new Promise(function () {
+							return !! a;
+						});
+					},
+				}, self)
 
-			.extend( self, [ 'abc', 'def' ] );
+				// Or give an existent instance and the list of keys you want to use
+				// This will run thoose functions with the first object as context
+				// .extend( context, [ 'methodName', ... ] )
+
+				.extend( self, [ 'abc', 'def' ] )
 	};
 
 	// You can:
@@ -96,7 +96,7 @@ var Promise = require('findhit-promise');
 				})
 				.error(function ( err ){
 					// ...
-				});
+				})
 
 			// or
 
@@ -105,14 +105,14 @@ var Promise = require('findhit-promise');
 					// ...
 				}, function ( err ){
 					// ...
-				});
+				})
 
 		// Always receive err
 			
 			async( a1, b1 )
 				.done(function ( err, a2, b2 ) {
 					// ...
-				});
+				})
 
 		// Chain multiple thens
 
@@ -125,13 +125,38 @@ var Promise = require('findhit-promise');
 				})
 				.then(function ( z ) {
 					return z;
-				});
+				})
 
-		// Chain multiple actions if they have configured context
+		// Chain multiple actions
 
-			async( a1, b1 )
-				.and()
-				.
+			Promise.all(
+			
+				async( a1, b1 ),
+				async( a2, b2 ),
+				async( a3, b3 )
+			
+			).then(function ( arrayOfResults ) {
+				// ...
+			})
+
+			Promise.all([
+			
+				async( a1, b1 ),
+				async( a2, b2 ),
+				async( a3, b3 ),
+
+			]).then(function ( arrayOfResults ) {
+				// ...
+			})
+
+		// Or if they provide some action context
+
+			async( a1, b1 ).and().
+			async( a2, b2 ).and().
+			async( a3, b3 )
+				.then(function ( arrayOfResults ) {
+					// ...
+				})
 
 
 		// since .error catches current promise error, you can also configure a catch all errors
