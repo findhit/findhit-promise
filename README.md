@@ -151,10 +151,10 @@ var Promise = require('findhit-promise');
 
 		// Or if they provide some action context
 
-			async( a1, b1 ).and().
-			async( a2, b2 ).and().
-			async( a3, b3 )
-				.then(function ( arrayOfResults ) {
+			async( a1, b1 ).
+			async( a2, b2 ).
+			async( a3, b3 ).
+				then(function ( arrayOfResults ) {
 					// ...
 				})
 
