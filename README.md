@@ -54,7 +54,8 @@ var Promise = require('findhit-promise');
 			// Otherwise
 			done( a2, b2 );
 		})
-			// You can configure contexts for chained actions by:
+			// If you have more actions on the same environment
+			// you can configure them to be chained to this promise by:
 
 				// specifying function
 				// .extend( name, fn, context )
@@ -84,6 +85,8 @@ var Promise = require('findhit-promise');
 				// .extend( context, [ 'methodName', ... ] )
 
 				.extend( self, [ 'abc', 'def' ] )
+
+				.ready()
 	};
 
 	// You can:

@@ -26,7 +26,9 @@
 	},
 	"dependencies": {
 		"findhit-class": "findhit/findhit-class",
-		"findhit-process": "findhit/findhit-process"
+		"findhit-process": "findhit/findhit-process",
+
+		"underscore": "latest"
 	},
 	"devDependencies": {},
 	"keywords": [
