@@ -1,6 +1,7 @@
 REPORTER ?= spec
 
 # Paths
+DEBUG ?= 
 HOME ?= $(shell dirname $(realpath ~))
 BASE := $(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 PATH_TEST := $(BASE)/tests
@@ -15,4 +16,4 @@ test-mocha:
 	$(eval TESTS := $(shell find $(PATH_TEST)/* -name "*.test.js"))
 
 	@echo "Running tests..."
-	@mocha --globals setImmediate,clearImmediate --check-leaks --colors -t 10000 --reporter $(REPORTER) $(TESTS);
+	@mocha $(shell [ ! -z "$(DEBUG)" ] && echo "--debug-brk" || echo "" ) --globals setImmediate,clearImmediate --check-leaks --colors -t 10000 --reporter $(REPORTER) $(TESTS);
