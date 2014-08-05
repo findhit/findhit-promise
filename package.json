@@ -27,7 +27,7 @@
   "dependencies": {
     "findhit-class": "findhit/findhit-class",
     "findhit-process": "findhit/findhit-process",
-    "underscore": "latest"
+    "findhit-util": "findhit/findhit-util"
   },
   "devDependencies": {
     "mocha": "^1.21.3",
