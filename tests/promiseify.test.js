@@ -7,7 +7,7 @@ var Promise = require('../index'),
 
 describe( "Promise", function () {
 
-	describe.only( ".ify", function () {
+	describe( ".ify", function () {
 
 		it( "function with second argument as a callback that returns a value", function ( done ) {
 
