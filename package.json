@@ -25,9 +25,9 @@
     "url": "https://github.com/findhit/findhit-promise/issues"
   },
   "dependencies": {
-    "findhit-class": "findhit/findhit-class",
-    "findhit-process": "findhit/findhit-process",
-    "findhit-util": "findhit/findhit-util"
+    "findhit-class": "latest",
+    "findhit-process": "latest",
+    "findhit-util": "latest"
   },
   "devDependencies": {
     "chai": "^1.9.1",
