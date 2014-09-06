@@ -7,7 +7,7 @@ javascript promise built on top of findhit-class
 ## Instalation
 
 ```bash
-npm install findhit/findhit-promise --save
+npm install findhit-promise --save
 ```
 
 ## Usage
