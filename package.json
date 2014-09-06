@@ -1,7 +1,7 @@
 {
   "name": "findhit-promise",
   "description": "javascript promise built on top of findhit-class",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "José Moreira <jose.moreira@findhit.com>",
   "contributors": [
     {
@@ -27,7 +27,7 @@
   "dependencies": {
     "findhit-class": "latest",
     "findhit-process": "latest",
-    "findhit-util": "latest"
+    "findhit-util": "0.0.2"
   },
   "devDependencies": {
     "chai": "^1.9.1",

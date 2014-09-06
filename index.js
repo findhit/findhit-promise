@@ -20,8 +20,6 @@ require('./lib/promiseify')( Promise );
 require('./lib/common')( Promise );
 require('./lib/util')( Promise );
 
-return Promise;
-
 // Export it
 module.exports = Promise;
 
