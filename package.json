@@ -1,7 +1,7 @@
 {
   "name": "findhit-promise",
   "description": "javascript promise built on top of findhit-class",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "José Moreira <jose.moreira@findhit.com>",
   "contributors": [
     {
@@ -25,15 +25,15 @@
     "url": "https://github.com/findhit/findhit-promise/issues"
   },
   "dependencies": {
-    "findhit-class": "latest",
-    "findhit-process": "latest",
-    "findhit-util": "0.0.2"
+    "findhit-class": "^0.0.2",
+    "findhit-process": "^0.0.1",
+    "findhit-util": "^0.0.8"
   },
   "devDependencies": {
     "chai": "^1.9.1",
     "mocha": "^1.21.3",
-    "sinon": "^1.10.3",
-    "promises-aplus-tests": "^2.0.4"
+    "promises-aplus-tests": "^2.0.5",
+    "sinon": "^1.10.3"
   },
   "keywords": [
     "promise",
