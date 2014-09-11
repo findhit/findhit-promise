@@ -1,5 +1,4 @@
-findhit-promise
-===============
+# findhit-promise ![test-badge](http://strider.findhit.com/findhit/findhit-class/badge)
 
 javascript promise built on top of findhit-class
 
